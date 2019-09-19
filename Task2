@@ -1,0 +1,26 @@
+#Палиндром
+def palindrom(n):
+    if str(n) == str(n)[::-1]:
+        print('true')
+    else:
+        print('false')
+
+palindrom('7777')
+palindrom('33')
+palindrom('3456')
+
+def palindrome(n):
+    l_position = 0
+    r_position = len(n) - 1 #последовательно проверяем каждые цифры
+    while r_position >= l_position:
+        if not n[l_position] == n[r_position]:
+            return False
+        l_position += 1
+        r_position -= 1
+    return True
+
+
+print(palindrome('7777'))
+print(palindrome('8338'))
+print(palindrome('33'))
+print(palindrome('3456'))

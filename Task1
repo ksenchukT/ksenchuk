@@ -1,0 +1,30 @@
+def parking(day,hour): #Task1
+    if day=='even' and hour>=21 or hour<19:
+        h=hour
+        print('only left side till 19, your parking time is', h) # заранее знаем о четности или нечетности дня и также прописывае дополнительно время, в которое происходит парковка
+    elif day=='odd' and hour>=21 or hour<19:
+        h = hour
+        print('only right side till 19, your parking time is', h)
+    else:
+        h = hour
+        print('both sides till 21, your parking time is', h)
+parking('odd',21)
+parking('even',22)
+parking('odd',20)
+parking('even',20)
+
+def parking1(day,hour):
+    if day % 2 == 0 and hour>=21 or hour<19:
+        h=hour
+        print('only left side till 19, your parking time is',h) # первоначально нужно выяснить четная дата либо нет
+    elif day % 2 == 1 and hour>=21 or hour<19:
+        h=hour
+        print('only right side till 19, your parking time is',h)
+    else:
+        h=hour
+        print('both sides till 21, your parking time is',h)
+parking1(22,12)
+parking1(11,20)
+parking1(2,20)
+parking1(3,21)
+
