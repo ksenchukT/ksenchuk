@@ -1,0 +1,8 @@
+def deleteduplicates(n):
+  newn = []
+  for i in n:
+    if i not in newn:
+      newn.append(i)
+  print(newn)
+
+deleteduplicates([2,'cat',7, 2, 9, 'cat', 7, 42])
